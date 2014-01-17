@@ -10,6 +10,7 @@
 //// * Arduino Uno & IDE
 //// * Gamby shield & libraries
 //// * dtc_data.h
+////
 
 #include <Gamby.h>
 #include "dtc_data.h"
@@ -17,14 +18,14 @@
 GambyGraphicsMode gamby;
 extern prog_int32_t font[];
 
-#define PIN_SPEAKER		9
-#define MAP_WIDTH		47
-#define MAP_HEIGHT		15
-#define TILE_NONE		0
-#define TILE_PICKUP		17
-#define	TILE_DROPOFF		18
-#define DEBUG_ON		0
-#define SCENE_PLAY		0
+#define PIN_SPEAKER			9
+#define MAP_WIDTH			47
+#define MAP_HEIGHT			15
+#define TILE_NONE			0
+#define TILE_PICKUP			17
+#define TILE_DROPOFF		18
+#define DEBUG_ON			0
+#define SCENE_PLAY			0
 #define SCENE_PICKUP1		1
 #define SCENE_PICKUP2		2
 #define SCENE_PICKUP3		3
@@ -34,24 +35,24 @@ extern prog_int32_t font[];
 #define SCENE_DROPOFF3		7
 #define SCENE_DROPOFF4		8
 #define SCENE_SPLASH		9
-#define SCENE_TITLE		10
-#define SCENE_MENU		11
+#define SCENE_TITLE			10
+#define SCENE_MENU			11
 #define SCENE_SETTINGS		12
-#define SCENE_STORY		13
-#define SCENE_ABOUT		14
-#define SCENE_HELP		15
-#define SCENE_LEVEL		16
-#define SCENE_QUIT		17
+#define SCENE_STORY			13
+#define SCENE_ABOUT			14
+#define SCENE_HELP			15
+#define SCENE_LEVEL			16
+#define SCENE_QUIT			17
 
-#define TURN_VACANT		0
-#define TURN_PICKUP		1
+#define TURN_VACANT			0
+#define TURN_PICKUP			1
 #define TURN_DROPOFF		2
-#define TURN_OFF		3
+#define TURN_OFF			3
 
-#define ALIGN_NONE		0
-#define ALIGN_LEFT		1
+#define ALIGN_NONE			0
+#define ALIGN_LEFT			1
 #define ALIGN_CENTER		2
-#define ALIGN_RIGHT		3
+#define ALIGN_RIGHT			3
 
 #define INPUT_BUTTON_N		0
 #define INPUT_BUTTON_E		1
@@ -62,28 +63,28 @@ extern prog_int32_t font[];
 #define INPUT_DPAD_LEFT		6
 #define INPUT_DPAD_RIGHT	7
 
-#define MENU_START		0
+#define MENU_START			0
 #define MENU_SETTINGS		1
-#define MENU_STORY		2
-#define MENU_HELP		3
-#define MENU_ABOUT		4
-#define MENU_RESUME		5
-#define MENU_QUIT		6
-#define MENU_YES		7
-#define MENU_NO			8
+#define MENU_STORY			2
+#define MENU_HELP			3
+#define MENU_ABOUT			4
+#define MENU_RESUME			5
+#define MENU_QUIT			6
+#define MENU_YES			7
+#define MENU_NO				8
 
-#define SOUND_MUSIC		0
+#define SOUND_MUSIC			0
 #define SOUND_EFFECTS		1
-#define SOUND_OFF		2
+#define SOUND_OFF			2
 
 #define DIFFICULTY_EASY		0
 #define DIFFICULTY_HARD		1
 #define DIFFICULTY_EXPERT	2
 
-#define TIMER_NONE		0
-#define TIMER_SHOW		1
-#define TIMER_ALERT		2
-#define TIMER_END		3
+#define TIMER_NONE			0
+#define TIMER_SHOW			1
+#define TIMER_ALERT			2
+#define TIMER_END			3
 
 int vector_auto[] = {
 	-2, -2,   2, -2,   2,  2,  -2,  2,
