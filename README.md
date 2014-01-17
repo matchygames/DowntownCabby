@@ -4,3 +4,5 @@ Downtown Cabby v1.0
      17-Jan-2014
 
 Game for the Arduino Uno & Gamby shield.
+
+Place files 'dtc.ino' & 'dtc_data.h' in folder 'dtc'!
