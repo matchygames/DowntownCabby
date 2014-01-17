@@ -17,14 +17,14 @@
 GambyGraphicsMode gamby;
 extern prog_int32_t font[];
 
-#define PIN_SPEAKER			9
-#define MAP_WIDTH			47
-#define MAP_HEIGHT			15
-#define TILE_NONE			0
-#define TILE_PICKUP			17
+#define PIN_SPEAKER		9
+#define MAP_WIDTH		47
+#define MAP_HEIGHT		15
+#define TILE_NONE		0
+#define TILE_PICKUP		17
 #define	TILE_DROPOFF		18
-#define DEBUG_ON			0
-#define SCENE_PLAY			0
+#define DEBUG_ON		0
+#define SCENE_PLAY		0
 #define SCENE_PICKUP1		1
 #define SCENE_PICKUP2		2
 #define SCENE_PICKUP3		3
@@ -34,23 +34,23 @@ extern prog_int32_t font[];
 #define SCENE_DROPOFF3		7
 #define SCENE_DROPOFF4		8
 #define SCENE_SPLASH		9
-#define SCENE_TITLE			10
-#define SCENE_MENU			11
+#define SCENE_TITLE		10
+#define SCENE_MENU		11
 #define SCENE_SETTINGS		12
-#define SCENE_STORY			13
-#define SCENE_ABOUT			14
-#define SCENE_HELP			15
-#define SCENE_LEVEL			16
-#define SCENE_QUIT			17
+#define SCENE_STORY		13
+#define SCENE_ABOUT		14
+#define SCENE_HELP		15
+#define SCENE_LEVEL		16
+#define SCENE_QUIT		17
 
 #define TURN_VACANT		0
 #define TURN_PICKUP		1
-#define TURN_DROPOFF	2
+#define TURN_DROPOFF		2
 #define TURN_OFF		3
 
 #define ALIGN_NONE		0
 #define ALIGN_LEFT		1
-#define ALIGN_CENTER	2
+#define ALIGN_CENTER		2
 #define ALIGN_RIGHT		3
 
 #define INPUT_BUTTON_N		0
@@ -62,28 +62,28 @@ extern prog_int32_t font[];
 #define INPUT_DPAD_LEFT		6
 #define INPUT_DPAD_RIGHT	7
 
-#define MENU_START			0
+#define MENU_START		0
 #define MENU_SETTINGS		1
-#define MENU_STORY			2
-#define MENU_HELP			3
-#define MENU_ABOUT			4
-#define MENU_RESUME			5
-#define MENU_QUIT			6
-#define MENU_YES			7
-#define MENU_NO				8
+#define MENU_STORY		2
+#define MENU_HELP		3
+#define MENU_ABOUT		4
+#define MENU_RESUME		5
+#define MENU_QUIT		6
+#define MENU_YES		7
+#define MENU_NO			8
 
-#define SOUND_MUSIC			0
+#define SOUND_MUSIC		0
 #define SOUND_EFFECTS		1
-#define SOUND_OFF			2
+#define SOUND_OFF		2
 
 #define DIFFICULTY_EASY		0
 #define DIFFICULTY_HARD		1
 #define DIFFICULTY_EXPERT	2
 
-#define TIMER_NONE			0
-#define TIMER_SHOW			1
-#define TIMER_ALERT			2
-#define TIMER_END			3
+#define TIMER_NONE		0
+#define TIMER_SHOW		1
+#define TIMER_ALERT		2
+#define TIMER_END		3
 
 int vector_auto[] = {
 	-2, -2,   2, -2,   2,  2,  -2,  2,
@@ -816,8 +816,8 @@ void draw_vector(byte x, byte y, int *vect, byte vect_points, float angle, float
 	_bot plot;
 	for (byte j = 0; j < vect_points; j += 2) {
 		i = j;
-		rect.dx = (cos(angle) * vect[i] * size)		- (sin(angle) * vect[i + 1] * size);
-		rect.dy = (cos(angle) * vect[i + 1] * size)	+ (sin(angle) * vect[i] * size);
+		rect.dx = (cos(angle) * vect[i] * size)	- (sin(angle) * vect[i + 1] * size);
+		rect.dy = (cos(angle) * vect[i + 1] * size) + (sin(angle) * vect[i] * size);
 		plot.x0 = (int)rect.dx + x;
 		plot.y0 = (int)rect.dy + y;
 		if (j < vect_points - 2) {
@@ -825,8 +825,8 @@ void draw_vector(byte x, byte y, int *vect, byte vect_points, float angle, float
 		} else {
 			i = 0;
 		}
-		rect.dx = (cos(angle) * vect[i] * size)		- (sin(angle) * vect[i + 1] * size);
-		rect.dy = (cos(angle) * vect[i + 1] * size)	+ (sin(angle) * vect[i] * size);
+		rect.dx = (cos(angle) * vect[i] * size)	- (sin(angle) * vect[i + 1] * size);
+		rect.dy = (cos(angle) * vect[i + 1] * size) + (sin(angle) * vect[i] * size);
 		plot.x1 = (int)rect.dx + x;
 		plot.y1 = (int)rect.dy + y;
 		gamby.line(plot.x0, plot.y0, plot.x1, plot.y1);
@@ -1275,15 +1275,15 @@ void update_sound() {
 	int frequency = 0;
 	switch (score.scene_id) {
 		case SCENE_SPLASH:
-			if (score.scene_timer == 1)	frequency = 800;
+			if (score.scene_timer == 1) frequency = 800;
 			song.delay = 1;
 			break;
 		case SCENE_LEVEL:
-			if (score.scene_timer == 1)	frequency = 800;
+			if (score.scene_timer == 1) frequency = 800;
 			song.delay = 1;
 			break;
 		case SCENE_TITLE:
-			if (score.scene_timer == 1)	frequency = 800;
+			if (score.scene_timer == 1) frequency = 800;
 			song.delay = 1;
 			break;
 		case SCENE_PLAY:
@@ -1294,16 +1294,16 @@ void update_sound() {
 			break;
 		case SCENE_MENU:
 			if (score.menu_anim == 64) frequency = 800;
-			if (score.scene_timer == 1)	frequency = 800;
+			if (score.scene_timer == 1) frequency = 800;
 			song.delay = 3;
 			break;
 		case SCENE_SETTINGS:
-			if (score.scene_timer == 1)	frequency = 800;
+			if (score.scene_timer == 1) frequency = 800;
 			song.delay = 3;
 			break;
 		case SCENE_PICKUP1:
 			frequency = 40;
-			if (score.scene_timer == 1)	frequency = 500;
+			if (score.scene_timer == 1) frequency = 500;
 			break;
 		case SCENE_PICKUP4:
 			frequency = 80;
